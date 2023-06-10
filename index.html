@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página HTML</title>
+</head>
+<body>
+    <h1>Datos de la cuenta</h1>
+    <div>
+      <div>
+        <label for="campo-cuenta">Cuenta:</label>
+        <input type="text" id="campo-cuenta" value="1234567890" readonly>
+        <button onclick="copiarCampo('campo-cuenta')">Copiar Cuenta</button>
+      </div>
+      <div>
+          <label for="campo-nombre">Nombre de la cuenta:</label>
+          <input type="text" id="campo-nombre" value="Perla zurisaday Lopez Cobian" readonly>
+          <button onclick="copiarCampo('campo-nombre')">Copiar Nombre</button>
+      </div>
+      <div>
+        <label for="campo-banco">Banco:</label>
+        <input type="text" id="campo-banco" value="BBVA" readonly>
+        <button onclick="copiarCampo('campo-banco')">Copiar Banco</button>
+      </div>
+
+    </div>
+
+    <h2>Conversación de WhatsApp</h2>
+
+    <button onclick="redirigirWhatsApp()">Abrir WhatsApp</button>
+
+    <script>
+        function copiarCampo(idCampo) {
+            var campo = document.getElementById(idCampo);
+            var texto = campo.value;
+
+            navigator.clipboard.writeText(texto).then(function() {
+                alert("Campo copiado al portapapeles: " + idCampo);
+            }, function(err) {
+                console.error("Error al copiar el campo: ", err);
+            });
+        }
+
+        function redirigirWhatsApp() {
+            var numero = "314422886";
+            var url = "https://api.whatsapp.com/send?phone=" + numero;
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
