@@ -45,7 +45,7 @@ function App() {
       <div className='inputs-container'>
         <div className='inputs-container__data'>
           <label for="cuenta">Cuenta:</label>
-          <input className='inputs-container__data__input' type="text" id="cuenta" value="4152 3140 5397 1696" readonly />
+          <input className='inputs-container__data__input' type="text" id="cuenta" value="4152314053971696" readonly />
           <button className='inputs-container__data__button' onClick={() => copiarCampo('cuenta')}>Copiar Cuenta</button>
         </div>
         <div className='inputs-container__data'>
