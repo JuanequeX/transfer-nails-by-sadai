@@ -1,4 +1,4 @@
-import logo from "../src/assets/LOGO-SADAI-NAILS.jpeg"
+import logo from "../src/assets/LOGO-SADAI-NAILS.webp"
 import Footer from "./components/Footer";
 import Inputs from "./components/inputs"
 import Whatapp from './components/Whatapp';
